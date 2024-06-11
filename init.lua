@@ -1,4 +1,3 @@
---code for lazy to work
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,4 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+
+-- Source stdheader.vim file
+vim.cmd("source ~/.config/nvim/stdheader.vim")
+
+-- Source 42 formatetr plugin from .vim file
+vim.cmd("source ~/.config/nvim/c_formatter_42.vim")
 
